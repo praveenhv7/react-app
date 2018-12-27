@@ -1,0 +1,24 @@
+{
+  "name": "react-demo",
+  "version": "1.0.0",
+  "description": "Profile page using node and react",
+  "main": "index.html",
+  "scripts": {
+    "start":"npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite":"lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenhv7/react-app.git"
+  },
+  "author": "Praveen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praveenhv7/react-app/issues"
+  },
+  "homepage": "https://github.com/praveenhv7/react-app#readme",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}

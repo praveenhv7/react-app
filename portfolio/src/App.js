@@ -4,8 +4,18 @@ import { Navbar,NavbarBrand } from 'reactstrap'
 import Projects from './components/ProjectComponent'
 import FavoriteDishes from './components/FavoriteDishes'
 import './App.css';
+import {DISHES} from './shared/dishes';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      dishes: DISHES
+    };
+  }
+
+
   render() {
     return (
       <div>
@@ -15,7 +25,7 @@ class App extends Component {
           </div>
           </Navbar>
           <Projects />
-          <FavoriteDishes/>
+          <FavoriteDishes dishes = {this.state.dishes}/>
       </div>
     );
   }

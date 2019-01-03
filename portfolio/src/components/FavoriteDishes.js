@@ -1,27 +1,22 @@
 import React, {Component} from 'react';
-import {Media,Card,CardBody,CardImg,CardImgOverlay,CardText,CardHeader,CardTitle} from 'reactstrap';
-import DishDetail from './DishDetail'
+import {Card,CardImg,CardImgOverlay,CardTitle} from 'reactstrap';
+
 
 class FavoriteDishes extends Component{
 
   constructor(props) {
     super(props);
-    this.state = {
-      selectedDish : null
-       }
-  }
+    }
 
-  onDishSelect(dish) {
-    this.setState({selectedDish : dish});
-  }
+
 
 
 
   render() {
     const myDishes = this.props.dishes.map((dish) => {
       return (
-        <div className="col-12 col-md-5 m-1">
-        <Card key={dish.id} onClick={()=> this.onDishSelect(dish)} >
+        <div key={dish.id} className="col-12 col-md-5 m-1">
+        <Card  onClick={()=> this.props.onClick(dish.id)} >
                       <CardImg width="100%" object src={dish.image} alt={dish.name} />
                       <CardImgOverlay className="ml-5">
                     <CardTitle>{dish.name}</CardTitle>
@@ -32,17 +27,16 @@ class FavoriteDishes extends Component{
 
     });
     return (
+      <div>
           <div className="container">
             <div className="row">
             <h3 className="col-12 mt-2"> Favorite Dishes </h3>
+            </div>
+            <div className="row">
                   {myDishes}
             </div>
-            <div className = "row">
-            <h3 className="col-12 mt-2"> Selected Dish: </h3>
-            </div>
-              <DishDetail selectedDishDetails = {this.state.selectedDish}>
-              </DishDetail>
           </div>
+        </div>
         );
   }
 

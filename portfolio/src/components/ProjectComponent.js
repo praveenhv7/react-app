@@ -12,13 +12,22 @@ class Projects extends Component {
           id:0,
           name: 'Kademlia',
           label: 'Computer Netwroks',
-          description: 'DHT based protocol'
+          description: 'A peer-to-peer distributed hash table (DHT).'+
+                        'Implemented using python. To enable privacy and '+
+                        'confidentiality, TLS is incorporated.',
+          duration: 'Two weeks.'
         },
         {
           id:1,
           name: 'Tron Bot',
           label: 'Fundamentals of AI',
-          description : 'Using MiniMax and Neural Networks'
+          description : 'Using MiniMax and Neural Networks with genetic algorithm'
+        },
+        {
+          id:2,
+          name: 'Predicting Car path without GPS',
+          label:'Computer Networks',
+          description:''
         }
 
       ]

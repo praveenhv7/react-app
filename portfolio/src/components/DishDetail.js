@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {Media,Card,CardBody,CardHeader,CardImg,CardImgOverlay,CardText,CardTitle} from 'reactstrap';
+import {Card,CardBody,CardHeader,CardImg,CardText,CardTitle} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -57,16 +57,19 @@ class DishDetail extends Component{
     const selectedDish = this.props.selectedDishDetails;
     //const comments = this.renderComments(selectedDish);
     return (
-        <div className = "row">
-        <div className ="col-12 col-md-5 m-1">
-          {this.renderDish(selectedDish)}
-        </div>
-        <div className ="col-12 col-md-5 m-1">
-          <Card className="card border-warning mb-3">
-          <CardHeader>Comments</CardHeader>
-          {this.renderComments(selectedDish)}
-          </Card>
-        </div>
+      <div className="container">
+          <div className = "row">
+              <h3 className="col-12 mt-2"> Selected Dish: </h3>
+          <div className ="col-12 col-md-5 m-1">
+            {this.renderDish(selectedDish)}
+          </div>
+          <div className ="col-12 col-md-5 m-1">
+            <Card className="card border-warning mb-3">
+            <CardHeader>Comments</CardHeader>
+            {this.renderComments(selectedDish)}
+            </Card>
+          </div>
+          </div>
         </div>
       );
   }
